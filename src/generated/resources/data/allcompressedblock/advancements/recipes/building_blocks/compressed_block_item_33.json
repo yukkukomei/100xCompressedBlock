@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_compressed_block_32": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "allcompressedblock:compressed_block_item_32"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "allcompressedblock:compressed_block_item_33"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_compressed_block_32",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "allcompressedblock:compressed_block_item_33"
+    ]
+  },
+  "sends_telemetry_event": false
+}

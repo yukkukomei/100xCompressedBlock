@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "allcompressedblock:compressed_block_item_23"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "allcompressedblock:compressed_block_item_22"
+  }
+}
