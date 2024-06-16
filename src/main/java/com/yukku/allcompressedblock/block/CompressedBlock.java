@@ -13,19 +13,22 @@ public class CompressedBlock {
 
     @SuppressWarnings("unchecked")
     public static final RegistryObject<Block>[] COMPRESSED_DIAMOND_BLOCKS = new RegistryObject[100];
+
     @SuppressWarnings("unchecked")
     public static final RegistryObject<Block>[] COMPRESSED_IRON_BLOCKS = new RegistryObject[100];
+
     public static final String COMPRESSED_DIAMOND_BLOCK = "compressed_diamond_block_";
     public static final String COMPRESSED_IRON_BLOCK = "compressed_iron_block_";
 
     static {
-        for (int i = 0; i < 100; i++) {
-            COMPRESSED_DIAMOND_BLOCKS[i] = BLOCKS.register(COMPRESSED_DIAMOND_BLOCK + (i + 1),
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-        }
-        for (int i = 0; i < 100; i++) {
-            COMPRESSED_IRON_BLOCKS[i] = BLOCKS.register(COMPRESSED_IRON_BLOCK + (i + 1),
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+        registerBlocks(COMPRESSED_DIAMOND_BLOCKS, COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK);
+        registerBlocks(COMPRESSED_IRON_BLOCKS, COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK);
+    }
+
+    private static void registerBlocks(RegistryObject<Block>[] blockArray, String blockName, Block baseBlock) {
+        for (int i = 0; i < blockArray.length; i++) {
+            blockArray[i] = BLOCKS.register(blockName + (i + 1),
+                    () -> new Block(BlockBehaviour.Properties.copy(baseBlock)));
         }
     }
 }
