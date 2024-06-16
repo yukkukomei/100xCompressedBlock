@@ -13,15 +13,15 @@ public class CompressedBlockModelProvider extends BlockModelProvider {
 
     @Override
     protected void registerModels() {
+        registerBlockModels(CompressedBlock.COMPRESSED_DIAMOND_BLOCK, "block/cube_all", CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
+        registerBlockModels(CompressedBlock.COMPRESSED_IRON_BLOCK, "block/cube_all", CompressedBlock.COMPRESSED_IRON_BLOCK);
+    }
+
+    private void registerBlockModels(String blockPrefix, String parentModel, String texturePrefix) {
         for (int i = 0; i < 100; i++) {
-            getBuilder(CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1))
-                    .parent(getExistingFile(mcLoc("block/cube_all")))
-                    .texture("all", modLoc("block/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)));
-        }
-        for (int i = 0; i < 100; i++) {
-            getBuilder(CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1))
-                    .parent(getExistingFile(mcLoc("block/cube_all")))
-                    .texture("all", modLoc("block/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)));
+            getBuilder(blockPrefix + (i + 1))
+                    .parent(getExistingFile(mcLoc(parentModel)))
+                    .texture("all", modLoc("block/" + texturePrefix + (i + 1)));
         }
     }
 }

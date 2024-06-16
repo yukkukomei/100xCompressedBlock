@@ -14,11 +14,13 @@ public class CompressedItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        registerItemModels(CompressedItem.COMPRESSED_IRON_BLOCK_ITEM, CompressedBlock.COMPRESSED_IRON_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM, CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
+    }
+
+    private void registerItemModels(String itemPrefix, String blockPrefix) {
         for (int i = 0; i < 100; i++) {
-            withExistingParent(CompressedItem.COMPRESSED_IRON_BLOCK_ITEM + (i + 1), modLoc("block/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)));
-        }
-        for (int i = 0; i < 100; i++) {
-            withExistingParent(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM + (i + 1), modLoc("block/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)));
+            withExistingParent(itemPrefix + (i + 1), modLoc("block/" + blockPrefix + (i + 1)));
         }
     }
 }
