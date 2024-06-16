@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_compressed_diamond_block_34": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "allcompressedblock:compressed_diamond_block_item_34"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "allcompressedblock:compressed_diamond_block_item_35"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_compressed_diamond_block_34",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "allcompressedblock:compressed_diamond_block_item_35"
+    ]
+  },
+  "sends_telemetry_event": false
+}
