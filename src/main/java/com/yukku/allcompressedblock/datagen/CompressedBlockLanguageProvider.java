@@ -14,20 +14,16 @@ public class CompressedBlockLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemgroup.compressed_block", "100x Compressed Block");
+        addBlockTranslations(CompressedBlock.COMPRESSED_DIAMOND_BLOCK, "Compressed Diamond Block", "x Compressed Diamond Block");
+        addBlockTranslations(CompressedBlock.COMPRESSED_IRON_BLOCK, "Compressed Iron Block", "x Compressed Iron Block");
+    }
 
+    private void addBlockTranslations(String blockName, String singleCompressedName, String multiCompressedName) {
         for (int i = 1; i <= 100; i++) {
             if (i == 1) {
-                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i, "Compressed Diamond Block");
+                add("block." + AllCompressedBlock.MOD_ID + "." + blockName + i, singleCompressedName);
             } else {
-                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i, i + "x Compressed Diamond Block");
-            }
-        }
-
-        for (int i = 1; i <= 100; i++) {
-            if (i == 1) {
-                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, "Compressed Iron Block");
-            } else {
-                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, i + "x Compressed Iron Block");
+                add("block." + AllCompressedBlock.MOD_ID + "." + blockName + i, i + multiCompressedName);
             }
         }
     }

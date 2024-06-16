@@ -16,6 +16,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -28,17 +29,16 @@ public class CompressedBlockLootTableProvider extends LootTableProvider {
     }
 
     private static class CompressedBlockLootSubProvider implements LootTableSubProvider {
-        @Override
         public void generate(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> writer) {
+            registerLootTables(writer, CompressedBlock.COMPRESSED_DIAMOND_BLOCKS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_IRON_BLOCKS, CompressedBlock.COMPRESSED_IRON_BLOCK, CompressedItem.COMPRESSED_IRON_BLOCK_ITEM);
+        }
+
+        private void registerLootTables(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> writer, RegistryObject<Block>[] blocks, String blockNamePrefix, String itemNamePrefix) {
             for (int i = 0; i < 100; i++) {
-                Block block = CompressedBlock.COMPRESSED_DIAMOND_BLOCKS[i].get();
-                writer.accept(new ResourceLocation(AllCompressedBlock.MOD_ID, "blocks/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)),
-                        createCompressedBlockLootTable(block, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM + (i + 1)));
-            }
-            for (int i = 0; i < 100; i++) {
-                Block block = CompressedBlock.COMPRESSED_IRON_BLOCKS[i].get();
-                writer.accept(new ResourceLocation(AllCompressedBlock.MOD_ID, "blocks/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)),
-                        createCompressedBlockLootTable(block, CompressedItem.COMPRESSED_IRON_BLOCK_ITEM + (i + 1)));
+                Block block = blocks[i].get();
+                writer.accept(new ResourceLocation(AllCompressedBlock.MOD_ID, "blocks/" + blockNamePrefix + (i + 1)),
+                        createCompressedBlockLootTable(block, itemNamePrefix + (i + 1)));
             }
         }
 
