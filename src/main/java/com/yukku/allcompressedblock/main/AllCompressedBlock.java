@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod("allcompressedblock")
+@Mod(AllCompressedBlock.MOD_ID)
 public class AllCompressedBlock {
 
     public static final String MOD_ID = "allcompressedblock";

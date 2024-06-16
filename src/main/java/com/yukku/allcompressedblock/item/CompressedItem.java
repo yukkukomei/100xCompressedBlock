@@ -13,12 +13,13 @@ public class CompressedItem {
 
     @SuppressWarnings("unchecked")
     public static final RegistryObject<Item>[] COMPRESSED_BLOCK_ITEMS = new RegistryObject[100];
+    public static final String COMPRESSED_DIAMOND_BLOCK_ITEM = "compressed_diamond_block_item_";
 
     static {
         for (int i = 0; i < 100; i++) {
             final int index = i;
-            COMPRESSED_BLOCK_ITEMS[i] = ITEMS.register("compressed_block_item_" + (index + 1),
-                    () -> new BlockItem(CompressedBlock.COMPRESSED_BLOCKS[index].get(), new Item.Properties()));
+            COMPRESSED_BLOCK_ITEMS[i] = ITEMS.register(COMPRESSED_DIAMOND_BLOCK_ITEM + (index + 1),
+                    () -> new BlockItem(CompressedBlock.COMPRESSED_DIAMOND_BLOCKS[index].get(), new Item.Properties()));
         }
     }
 }

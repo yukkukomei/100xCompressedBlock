@@ -1,5 +1,6 @@
 package com.yukku.allcompressedblock.datagen;
 
+import com.yukku.allcompressedblock.block.CompressedBlock;
 import com.yukku.allcompressedblock.main.AllCompressedBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
@@ -13,9 +14,9 @@ public class CompressedBlockModelProvider extends BlockModelProvider {
     @Override
     protected void registerModels() {
         for (int i = 0; i < 100; i++) {
-            getBuilder("compressed_block_" + (i + 1))
+            getBuilder(CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1))
                     .parent(getExistingFile(mcLoc("block/cube_all")))
-                    .texture("all", modLoc("block/compressed_block_" + (i + 1)));
+                    .texture("all", modLoc("block/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)));
         }
     }
 }
