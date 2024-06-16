@@ -1,5 +1,6 @@
 package com.yukku.allcompressedblock.datagen;
 
+import com.yukku.allcompressedblock.block.CompressedBlock;
 import com.yukku.allcompressedblock.main.AllCompressedBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -12,13 +13,21 @@ public class CompressedBlockJapanLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add("itemgroup.compressed_block", "Compressed Block");
+        add("itemgroup.compressed_block", "100x Compressed Block");
 
         for (int i = 1; i <= 100; i++) {
             if (i == 1) {
-                add("block.allcompressedblock.compressed_block_" + i, "圧縮ダイヤモンドブロック");
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i, "圧縮ダイヤモンドブロック");
             } else {
-                add("block.allcompressedblock.compressed_block_" + i, i + "倍圧縮ダイヤモンドブロック");
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i, i + "倍圧縮ダイヤモンドブロック");
+            }
+        }
+
+        for (int i = 1; i <= 100; i++) {
+            if (i == 1) {
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, "圧縮鉄ブロック");
+            } else {
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, i + "倍圧縮鉄ブロック");
             }
         }
     }

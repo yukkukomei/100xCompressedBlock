@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "allcompressedblock:compressed_diamond_block_item_92"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "allcompressedblock:compressed_diamond_block_item_93"
+  },
+  "show_notification": true
+}

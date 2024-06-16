@@ -1,6 +1,8 @@
 package com.yukku.allcompressedblock.datagen;
 
 import com.yukku.allcompressedblock.block.CompressedBlock;
+import com.yukku.allcompressedblock.item.CompressedItem;
+import com.yukku.allcompressedblock.main.AllCompressedBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.data.loot.LootTableSubProvider;
@@ -29,9 +31,14 @@ public class CompressedBlockLootTableProvider extends LootTableProvider {
         @Override
         public void generate(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> writer) {
             for (int i = 0; i < 100; i++) {
-                Block block = CompressedBlock.COMPRESSED_BLOCKS[i].get();
-                writer.accept(new ResourceLocation("allcompressedblock", "blocks/compressed_block_" + (i + 1)),
-                        createCompressedBlockLootTable(block, "compressed_block_item_" + (i + 1)));
+                Block block = CompressedBlock.COMPRESSED_DIAMOND_BLOCKS[i].get();
+                writer.accept(new ResourceLocation(AllCompressedBlock.MOD_ID, "blocks/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)),
+                        createCompressedBlockLootTable(block, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM + (i + 1)));
+            }
+            for (int i = 0; i < 100; i++) {
+                Block block = CompressedBlock.COMPRESSED_IRON_BLOCKS[i].get();
+                writer.accept(new ResourceLocation(AllCompressedBlock.MOD_ID, "blocks/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)),
+                        createCompressedBlockLootTable(block, CompressedItem.COMPRESSED_IRON_BLOCK_ITEM + (i + 1)));
             }
         }
 

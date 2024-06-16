@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "allcompressedblock:block/compressed_diamond_block_32"
+    }
+  }
+}

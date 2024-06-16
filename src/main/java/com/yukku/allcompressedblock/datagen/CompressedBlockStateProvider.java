@@ -14,7 +14,8 @@ public class CompressedBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (int i = 0; i < 100; i++) {
-            simpleBlock(CompressedBlock.COMPRESSED_BLOCKS[i].get());
+            simpleBlock(CompressedBlock.COMPRESSED_IRON_BLOCKS[i].get());
+            simpleBlock(CompressedBlock.COMPRESSED_DIAMOND_BLOCKS[i].get());
         }
     }
 }

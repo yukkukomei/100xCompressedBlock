@@ -12,12 +12,20 @@ public class CompressedBlock {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AllCompressedBlock.MOD_ID);
 
     @SuppressWarnings("unchecked")
-    public static final RegistryObject<Block>[] COMPRESSED_BLOCKS = new RegistryObject[100];
+    public static final RegistryObject<Block>[] COMPRESSED_DIAMOND_BLOCKS = new RegistryObject[100];
+    @SuppressWarnings("unchecked")
+    public static final RegistryObject<Block>[] COMPRESSED_IRON_BLOCKS = new RegistryObject[100];
+    public static final String COMPRESSED_DIAMOND_BLOCK = "compressed_diamond_block_";
+    public static final String COMPRESSED_IRON_BLOCK = "compressed_iron_block_";
 
     static {
         for (int i = 0; i < 100; i++) {
-            COMPRESSED_BLOCKS[i] = BLOCKS.register("compressed_block_" + (i + 1),
+            COMPRESSED_DIAMOND_BLOCKS[i] = BLOCKS.register(COMPRESSED_DIAMOND_BLOCK + (i + 1),
                     () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+        }
+        for (int i = 0; i < 100; i++) {
+            COMPRESSED_IRON_BLOCKS[i] = BLOCKS.register(COMPRESSED_IRON_BLOCK + (i + 1),
+                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
         }
     }
 }

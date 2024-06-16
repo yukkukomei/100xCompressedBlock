@@ -1,5 +1,7 @@
 package com.yukku.allcompressedblock.datagen;
 
+import com.yukku.allcompressedblock.block.CompressedBlock;
+import com.yukku.allcompressedblock.item.CompressedItem;
 import com.yukku.allcompressedblock.main.AllCompressedBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -13,7 +15,10 @@ public class CompressedItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         for (int i = 0; i < 100; i++) {
-            withExistingParent("compressed_block_item_" + (i + 1), modLoc("block/compressed_block_" + (i + 1)));
+            withExistingParent(CompressedItem.COMPRESSED_IRON_BLOCK_ITEM + (i + 1), modLoc("block/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)));
+        }
+        for (int i = 0; i < 100; i++) {
+            withExistingParent(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM + (i + 1), modLoc("block/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)));
         }
     }
 }

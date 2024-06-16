@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "allcompressedblock:compressed_iron_block_item_88"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "allcompressedblock:compressed_iron_block_item_89"
+  },
+  "show_notification": true
+}
