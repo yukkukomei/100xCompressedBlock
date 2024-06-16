@@ -9,7 +9,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 @Mod.EventBusSubscriber(modid = AllCompressedBlock.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CompressedBlockDataGenerators {
