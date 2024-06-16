@@ -23,5 +23,10 @@ public class CompressedBlockTagProvider extends BlockTagsProvider {
             tag(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(TagEntry.element(new ResourceLocation("allcompressedblock:compressed_block_" + i)));
         }
+
+        for (int i = 1; i <= 100; i++) {
+            tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                    .add(TagEntry.element(new ResourceLocation("allcompressedblock:compressed_block_" + i)));
+        }
     }
 }
