@@ -23,14 +23,9 @@ public class CompressedBlockRecipeProvider extends RecipeProvider {
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
         // 鉄圧縮レシピ
         addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_IRON_BLOCKS, CompressedBlock.COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK);
-
-        // 鉄解体レシピ
         addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS, CompressedBlock.COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK);
-
-        // ダイヤ圧縮レシピ
+        // ダイヤ圧縮解体レシピ
         addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_DIAMOND_BLOCKS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK);
-
-        // ダイヤ解体レシピ
         addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK);
     }
 
