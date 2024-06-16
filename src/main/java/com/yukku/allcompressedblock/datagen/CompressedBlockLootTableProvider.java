@@ -35,6 +35,11 @@ public class CompressedBlockLootTableProvider extends LootTableProvider {
                 writer.accept(new ResourceLocation(AllCompressedBlock.MOD_ID, "blocks/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)),
                         createCompressedBlockLootTable(block, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM + (i + 1)));
             }
+            for (int i = 0; i < 100; i++) {
+                Block block = CompressedBlock.COMPRESSED_IRON_BLOCKS[i].get();
+                writer.accept(new ResourceLocation(AllCompressedBlock.MOD_ID, "blocks/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)),
+                        createCompressedBlockLootTable(block, CompressedItem.COMPRESSED_IRON_BLOCK_ITEM + (i + 1)));
+            }
         }
 
         private LootTable.Builder createCompressedBlockLootTable(Block block, String itemName) {

@@ -18,5 +18,10 @@ public class CompressedBlockModelProvider extends BlockModelProvider {
                     .parent(getExistingFile(mcLoc("block/cube_all")))
                     .texture("all", modLoc("block/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)));
         }
+        for (int i = 0; i < 100; i++) {
+            getBuilder(CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1))
+                    .parent(getExistingFile(mcLoc("block/cube_all")))
+                    .texture("all", modLoc("block/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)));
+        }
     }
 }

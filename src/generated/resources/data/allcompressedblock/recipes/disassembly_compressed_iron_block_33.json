@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "allcompressedblock:compressed_iron_block_item_33"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "allcompressedblock:compressed_iron_block_item_32"
+  }
+}

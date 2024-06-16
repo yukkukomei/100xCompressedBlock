@@ -22,5 +22,13 @@ public class CompressedBlockLanguageProvider extends LanguageProvider {
                 add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i, i + "x Compressed Diamond Block");
             }
         }
+
+        for (int i = 1; i <= 100; i++) {
+            if (i == 1) {
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, "Compressed Iron Block");
+            } else {
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, i + "x Compressed Iron Block");
+            }
+        }
     }
 }

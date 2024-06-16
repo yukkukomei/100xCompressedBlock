@@ -15,6 +15,9 @@ public class CompressedItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         for (int i = 0; i < 100; i++) {
+            withExistingParent(CompressedItem.COMPRESSED_IRON_BLOCK_ITEM + (i + 1), modLoc("block/" + CompressedBlock.COMPRESSED_IRON_BLOCK + (i + 1)));
+        }
+        for (int i = 0; i < 100; i++) {
             withExistingParent(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM + (i + 1), modLoc("block/" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + (i + 1)));
         }
     }

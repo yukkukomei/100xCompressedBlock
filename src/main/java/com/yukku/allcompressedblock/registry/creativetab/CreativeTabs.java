@@ -1,5 +1,6 @@
 package com.yukku.allcompressedblock.registry.creativetab;
 
+import com.yukku.allcompressedblock.block.CompressedBlock;
 import com.yukku.allcompressedblock.item.CompressedItem;
 import com.yukku.allcompressedblock.main.AllCompressedBlock;
 import net.minecraft.core.registries.Registries;
@@ -17,10 +18,13 @@ public class CreativeTabs {
 
     public static final RegistryObject<CreativeModeTab> COMPRESSED_BLOCK = MOD_TABS.register("compressed_block",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(Blocks.DIAMOND_BLOCK))
+                    .icon(() -> new ItemStack(CompressedBlock.COMPRESSED_DIAMOND_BLOCKS[99].get()))
                     .title(Component.translatable("itemgroup.compressed_block"))
                     .displayItems((param, output) -> {
-                        for (RegistryObject<Item> item : CompressedItem.COMPRESSED_BLOCK_ITEMS) {
+                        for (RegistryObject<Item> item : CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS) {
+                            output.accept(item.get());
+                        }
+                        for (RegistryObject<Item> item : CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS) {
                             output.accept(item.get());
                         }
                     })

@@ -22,12 +22,14 @@ public class CompressedBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         for (int i = 1; i <= 100; i++) {
             tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i)));
+                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i)))
+                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_IRON_BLOCK + i)));
         }
 
         for (int i = 1; i <= 100; i++) {
             tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i)));
+                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i)))
+                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_IRON_BLOCK + i)));;
         }
     }
 }

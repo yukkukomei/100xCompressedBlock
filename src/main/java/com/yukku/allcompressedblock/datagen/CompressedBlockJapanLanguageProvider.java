@@ -22,5 +22,13 @@ public class CompressedBlockJapanLanguageProvider extends LanguageProvider {
                 add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i, i + "倍圧縮ダイヤモンドブロック");
             }
         }
+
+        for (int i = 1; i <= 100; i++) {
+            if (i == 1) {
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, "圧縮鉄ブロック");
+            } else {
+                add("block." + AllCompressedBlock.MOD_ID + "." + CompressedBlock.COMPRESSED_IRON_BLOCK + i, i + "倍圧縮鉄ブロック");
+            }
+        }
     }
 }
