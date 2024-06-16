@@ -4,3 +4,4 @@
 [Release](https://github.com/yukkukomei/100xCompressedBlock/releases/tag/1.1.0)からダウンロードしてください。
 ## 対応ブロック
 - ダイヤモンドブロック
+- 鉄ブロック
