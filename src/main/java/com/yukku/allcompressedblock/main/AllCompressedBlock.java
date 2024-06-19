@@ -22,10 +22,11 @@ public class AllCompressedBlock {
         CompressedBlock.BLOCKS.register(bus);
         CompressedItem.ITEMS.register(bus);
         CreativeTabs.MOD_TABS.register(bus);
+        CraftingHelper.register(new ConfigConditionSerializer());
     }
 
     // FMLCommonSetupEventのイベントハンドラ
     private void setup(final FMLCommonSetupEvent event) {
-        CraftingHelper.register(new ConfigConditionSerializer());
+        // ここに初期化処理を書く
     }
 }
