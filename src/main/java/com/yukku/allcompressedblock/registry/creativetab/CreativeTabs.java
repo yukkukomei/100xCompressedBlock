@@ -8,7 +8,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -20,13 +19,17 @@ public class CreativeTabs {
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(CompressedBlock.COMPRESSED_DIAMOND_BLOCKS[99].get()))
                     .title(Component.translatable("itemgroup.compressed_block"))
-                    .displayItems((param, output) -> {
-                        for (RegistryObject<Item> item : CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS) {
-                            output.accept(item.get());
-                        }
-                        for (RegistryObject<Item> item : CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS) {
-                            output.accept(item.get());
-                        }
-                    })
+                    .displayItems(CreativeTabs::displayCompressedItems)
                     .build());
+
+    private static void displayCompressedItems(Object param, CreativeModeTab.Output output) {
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS, output);
+    }
+
+    private static void displayItemsFromRegistry(RegistryObject<Item>[] items, CreativeModeTab.Output output) {
+        for (RegistryObject<Item> item : items) {
+            output.accept(item.get());
+        }
+    }
 }

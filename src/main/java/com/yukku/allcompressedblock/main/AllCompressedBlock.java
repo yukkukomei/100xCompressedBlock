@@ -14,8 +14,9 @@ public class AllCompressedBlock {
 
     public AllCompressedBlock() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        CreativeTabs.MOD_TABS.register(bus);
+
         CompressedBlock.BLOCKS.register(bus);
         CompressedItem.ITEMS.register(bus);
+        CreativeTabs.MOD_TABS.register(bus);
     }
 }
