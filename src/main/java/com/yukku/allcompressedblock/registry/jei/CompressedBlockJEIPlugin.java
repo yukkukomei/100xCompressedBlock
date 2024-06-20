@@ -30,19 +30,14 @@ public class CompressedBlockJEIPlugin implements IModPlugin {
     public void onRuntimeAvailable(IJeiRuntime jeiRuntime) {
         IIngredientManager ingredientManager = jeiRuntime.getIngredientManager();
 
-        if (!CompressedBlockConfig.REGISTER_DIAMOND.get()) {
-            // ダイヤ圧縮ブロックの登録が無効の場合は非表示
-            List<ItemStack> itemsToHide = new ArrayList<>();
-            for (RegistryObject<Item> item : CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS) {
-                itemsToHide.add(new ItemStack(item.get()));
-            }
-            ingredientManager.removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, itemsToHide);
-        }
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_DIAMOND.get(), CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_IRON.get(), CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS);
+    }
 
-        if (!CompressedBlockConfig.REGISTER_IRON.get()) {
-            // 鉄圧縮ブロックの登録が無効の場合は非表示
+    private void hideItems(IIngredientManager ingredientManager, boolean isDisplay, RegistryObject<Item>[] items) {
+        if (!isDisplay) {
             List<ItemStack> itemsToHide = new ArrayList<>();
-            for (RegistryObject<Item> item : CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS) {
+            for (RegistryObject<Item> item : items) {
                 itemsToHide.add(new ItemStack(item.get()));
             }
             ingredientManager.removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, itemsToHide);
