@@ -20,14 +20,12 @@ public class ConfigCondition implements ICondition {
 
     @Override
     public boolean test(IContext iContext) {
-        // configの値をチェックする
+        // コンフィグの値を取得してレシピの有効化を判定
         if (configKey.equals("General." + CompressedBlockConfig.REGISTER_DIAMOND_NAME)) {
-            //TODO: ここでconfigの値を取得して、expectedValueと比較する
-            return true;
+            return CompressedBlockConfig.REGISTER_DIAMOND.get() == expectedValue;
         }
         if (configKey.equals("General." + CompressedBlockConfig.REGISTER_IRON_NAME)) {
-            //TODO: ここでconfigの値を取得して、expectedValueと比較する
-            return true;
+            return CompressedBlockConfig.REGISTER_IRON.get() == expectedValue;
         }
         return false;
     }
