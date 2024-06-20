@@ -26,10 +26,10 @@ public class CompressedBlockRecipeProvider extends RecipeProvider {
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
         // 鉄圧縮解体レシピ
         addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_IRON_BLOCKS, CompressedBlock.COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK, "General.registerIron");
-        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS, CompressedBlock.COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK, "General.registerIron", true);
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS, CompressedBlock.COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK, "General.registerIron");
         // ダイヤ圧縮解体レシピ
         addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_DIAMOND_BLOCKS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK, "General.registerDiamond");
-        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK, "General.registerDiamond", true);
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK, "General.registerDiamond");
     }
 
     private void addCompressedRecipe(Consumer<FinishedRecipe> consumer, RegistryObject<Block>[] blocks, String blockPrefix, Block baseBlock, String configKey) {
@@ -65,19 +65,29 @@ public class CompressedBlockRecipeProvider extends RecipeProvider {
         }
     }
 
-    private void addDisassemblyRecipe(Consumer<FinishedRecipe> consumer, RegistryObject<Item>[] items, String blockPrefix, Block baseBlock, String configKey, boolean expectedValue) {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, baseBlock, 9)
-                .requires(items[0].get())
-                .unlockedBy("has_" + blockPrefix + "1", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(items[0].get()).build()))
-                .save(consumer, AllCompressedBlock.MOD_ID + ":disassembly_" + blockPrefix + "1");
+    private void addDisassemblyRecipe(Consumer<FinishedRecipe> consumer, RegistryObject<Item>[] items, String blockPrefix, Block baseBlock, String configKey) {
+        ConditionalRecipe.builder()
+                .addCondition(new ConfigCondition(configKey, true))
+                .addRecipe(
+                        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, baseBlock, 9)
+                                .requires(items[0].get())
+                                .unlockedBy("has_" + blockPrefix + "1", inventoryTrigger(ItemPredicate.Builder.item()
+                                        .of(items[0].get()).build()))
+                                ::save
+                )
+                .build(consumer, new ResourceLocation(AllCompressedBlock.MOD_ID, "disassembly_" + blockPrefix + "1"));
 
         for (int i = 1; i < 100; i++) {
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, items[i - 1].get(), 9)
-                    .requires(items[i].get())
-                    .unlockedBy("has_" + blockPrefix + (i + 1), inventoryTrigger(ItemPredicate.Builder.item()
-                            .of(items[i].get()).build()))
-                    .save(consumer, AllCompressedBlock.MOD_ID + ":disassembly_" + blockPrefix + (i + 1));
+            ConditionalRecipe.builder()
+                    .addCondition(new ConfigCondition(configKey, true))
+                    .addRecipe(
+                            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, items[i - 1].get(), 9)
+                                    .requires(items[i].get())
+                                    .unlockedBy("has_" + blockPrefix + (i + 1), inventoryTrigger(ItemPredicate.Builder.item()
+                                            .of(items[i].get()).build()))
+                                    ::save
+                    )
+                    .build(consumer, new ResourceLocation(AllCompressedBlock.MOD_ID, "disassembly_" + blockPrefix + (i + 1)));
         }
     }
 }
