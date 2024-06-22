@@ -55,7 +55,7 @@ public class CompressedBlock {
         registerBlocks(COMPRESSED_GOLD_BLOCKS, COMPRESSED_GOLD_BLOCK, Blocks.GOLD_BLOCK);
         registerBlocks(COMPRESSED_EMERALD_BLOCKS, COMPRESSED_EMERALD_BLOCK, Blocks.EMERALD_BLOCK);
         registerBlocks(COMPRESSED_LAPIS_BLOCKS, COMPRESSED_LAPIS_BLOCK, Blocks.LAPIS_BLOCK);
-        registerBlocks(COMPRESSED_REDSTONE_BLOCKS, COMPRESSED_REDSTONE_BLOCK, Blocks.REDSTONE_BLOCK);
+        registerRedstoneBlocks(COMPRESSED_REDSTONE_BLOCKS, COMPRESSED_REDSTONE_BLOCK, Blocks.REDSTONE_BLOCK);
         registerBlocks(COMPRESSED_COAL_BLOCKS, COMPRESSED_COAL_BLOCK, Blocks.COAL_BLOCK);
         registerBlocks(COMPRESSED_NETHERITE_BLOCKS, COMPRESSED_NETHERITE_BLOCK, Blocks.NETHERITE_BLOCK);
     }
@@ -64,6 +64,13 @@ public class CompressedBlock {
         for (int i = 0; i < blockArray.length; i++) {
             blockArray[i] = BLOCKS.register(blockName + (i + 1),
                     () -> new Block(BlockBehaviour.Properties.copy(baseBlock)));
+        }
+    }
+
+    private static void registerRedstoneBlocks(RegistryObject<Block>[] blockArray, String blockName, Block baseBlock) {
+        for (int i = 0; i < blockArray.length; i++) {
+            blockArray[i] = BLOCKS.register(blockName + (i + 1),
+                    () -> new CompressedRedstoneBlock(BlockBehaviour.Properties.copy(baseBlock)));
         }
     }
 }
