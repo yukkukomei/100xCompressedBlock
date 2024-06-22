@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "allcompressedblock:config_condition",
+          "configKey": "General.registerIron",
+          "expectedValue": true
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "allcompressedblock:compressed_iron_block_item_47"
+          }
+        },
+        "pattern": [
+          "###",
+          "###",
+          "###"
+        ],
+        "result": {
+          "item": "allcompressedblock:compressed_iron_block_item_48"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

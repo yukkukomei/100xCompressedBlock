@@ -15,6 +15,7 @@ public class CompressedBlockModelProvider extends BlockModelProvider {
     protected void registerModels() {
         registerBlockModels(CompressedBlock.COMPRESSED_DIAMOND_BLOCK, "block/cube_all", CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
         registerBlockModels(CompressedBlock.COMPRESSED_IRON_BLOCK, "block/cube_all", CompressedBlock.COMPRESSED_IRON_BLOCK);
+        registerBlockModels(CompressedBlock.COMPRESSED_COPPER_BLOCK, "block/cube_all", CompressedBlock.COMPRESSED_COPPER_BLOCK);
     }
 
     private void registerBlockModels(String blockPrefix, String parentModel, String texturePrefix) {

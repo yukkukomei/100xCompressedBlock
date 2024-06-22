@@ -32,6 +32,7 @@ public class CompressedBlockLootTableProvider extends LootTableProvider {
         public void generate(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> writer) {
             registerLootTables(writer, CompressedBlock.COMPRESSED_DIAMOND_BLOCKS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM);
             registerLootTables(writer, CompressedBlock.COMPRESSED_IRON_BLOCKS, CompressedBlock.COMPRESSED_IRON_BLOCK, CompressedItem.COMPRESSED_IRON_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_COPPER_BLOCKS, CompressedBlock.COMPRESSED_COPPER_BLOCK, CompressedItem.COMPRESSED_COPPER_BLOCK_ITEM);
         }
 
         private void registerLootTables(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> writer, RegistryObject<Block>[] blocks, String blockNamePrefix, String itemNamePrefix) {

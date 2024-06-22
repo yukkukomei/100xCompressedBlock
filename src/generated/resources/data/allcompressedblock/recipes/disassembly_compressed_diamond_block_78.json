@@ -1,13 +1,27 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "allcompressedblock:compressed_diamond_block_item_78"
+      "conditions": [
+        {
+          "type": "allcompressedblock:config_condition",
+          "configKey": "General.registerDiamond",
+          "expectedValue": true
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "allcompressedblock:compressed_diamond_block_item_78"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "allcompressedblock:compressed_diamond_block_item_77"
+        }
+      }
     }
-  ],
-  "result": {
-    "count": 9,
-    "item": "allcompressedblock:compressed_diamond_block_item_77"
-  }
+  ]
 }

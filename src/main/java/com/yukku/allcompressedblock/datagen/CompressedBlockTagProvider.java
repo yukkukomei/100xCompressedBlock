@@ -22,15 +22,18 @@ public class CompressedBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
-        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE);
-        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_COPPER_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_IRON_TOOL, CompressedBlock.COMPRESSED_COPPER_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_IRON_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_IRON_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
     }
 
-    private void addCompressedBlockTags(TagKey<Block> tagKey) {
+    private void addCompressedBlockTags(TagKey<Block> tagKey, String blockName) {
         for (int i = 1; i <= 100; i++) {
             tag(tagKey)
-                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i)))
-                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_IRON_BLOCK + i)));
+                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + blockName + i)));
         }
     }
 }

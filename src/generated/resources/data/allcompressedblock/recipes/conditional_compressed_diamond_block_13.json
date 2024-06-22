@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "allcompressedblock:config_condition",
+          "configKey": "General.registerDiamond",
+          "expectedValue": true
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "allcompressedblock:compressed_diamond_block_item_12"
+          }
+        },
+        "pattern": [
+          "###",
+          "###",
+          "###"
+        ],
+        "result": {
+          "item": "allcompressedblock:compressed_diamond_block_item_13"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

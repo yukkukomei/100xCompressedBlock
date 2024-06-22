@@ -1,13 +1,27 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "allcompressedblock:compressed_iron_block_item_75"
+      "conditions": [
+        {
+          "type": "allcompressedblock:config_condition",
+          "configKey": "General.registerIron",
+          "expectedValue": true
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "allcompressedblock:compressed_iron_block_item_75"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "allcompressedblock:compressed_iron_block_item_74"
+        }
+      }
     }
-  ],
-  "result": {
-    "count": 9,
-    "item": "allcompressedblock:compressed_iron_block_item_74"
-  }
+  ]
 }

@@ -16,6 +16,7 @@ public class CompressedItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         registerItemModels(CompressedItem.COMPRESSED_IRON_BLOCK_ITEM, CompressedBlock.COMPRESSED_IRON_BLOCK);
         registerItemModels(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM, CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_COPPER_BLOCK_ITEM, CompressedBlock.COMPRESSED_COPPER_BLOCK);
     }
 
     private void registerItemModels(String itemPrefix, String blockPrefix) {

@@ -17,12 +17,17 @@ public class CompressedBlock {
     @SuppressWarnings("unchecked")
     public static final RegistryObject<Block>[] COMPRESSED_IRON_BLOCKS = new RegistryObject[100];
 
+    @SuppressWarnings("unchecked")
+    public static final RegistryObject<Block>[] COMPRESSED_COPPER_BLOCKS = new RegistryObject[100];
+
     public static final String COMPRESSED_DIAMOND_BLOCK = "compressed_diamond_block_";
     public static final String COMPRESSED_IRON_BLOCK = "compressed_iron_block_";
+    public static final String COMPRESSED_COPPER_BLOCK = "compressed_copper_block_";
 
     static {
         registerBlocks(COMPRESSED_DIAMOND_BLOCKS, COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK);
         registerBlocks(COMPRESSED_IRON_BLOCKS, COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK);
+        registerBlocks(COMPRESSED_COPPER_BLOCKS, COMPRESSED_COPPER_BLOCK, Blocks.COPPER_BLOCK);
     }
 
     private static void registerBlocks(RegistryObject<Block>[] blockArray, String blockName, Block baseBlock) {
