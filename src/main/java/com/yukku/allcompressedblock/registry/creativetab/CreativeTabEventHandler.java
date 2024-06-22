@@ -17,6 +17,7 @@ public class CreativeTabEventHandler {
         if (event.getTab() == CreativeTabs.COMPRESSED_BLOCK.get()) {
             removeItems(event, CompressedBlockConfig.REGISTER_DIAMOND.get(), CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS);
             removeItems(event, CompressedBlockConfig.REGISTER_IRON.get(), CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS);
+            removeItems(event, CompressedBlockConfig.REGISTER_COPPER.get(), CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS);
         }
     }
 

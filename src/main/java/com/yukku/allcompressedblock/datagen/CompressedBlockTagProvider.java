@@ -30,7 +30,8 @@ public class CompressedBlockTagProvider extends BlockTagsProvider {
         for (int i = 1; i <= 100; i++) {
             tag(tagKey)
                     .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_DIAMOND_BLOCK + i)))
-                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_IRON_BLOCK + i)));
+                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_IRON_BLOCK + i)))
+                    .add(TagEntry.element(new ResourceLocation(AllCompressedBlock.MOD_ID + ":" + CompressedBlock.COMPRESSED_COPPER_BLOCK + i)));
         }
     }
 }

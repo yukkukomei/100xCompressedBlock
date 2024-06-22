@@ -27,9 +27,14 @@ public class CompressedBlockRecipeProvider extends RecipeProvider {
         // 鉄圧縮解体レシピ
         addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_IRON_BLOCKS, CompressedBlock.COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK, "General.registerIron");
         addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS, CompressedBlock.COMPRESSED_IRON_BLOCK, Blocks.IRON_BLOCK, "General.registerIron");
+
         // ダイヤ圧縮解体レシピ
         addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_DIAMOND_BLOCKS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK, "General.registerDiamond");
         addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, Blocks.DIAMOND_BLOCK, "General.registerDiamond");
+
+        // 銅圧縮解体レシピ
+        addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_COPPER_BLOCKS, CompressedBlock.COMPRESSED_COPPER_BLOCK, Blocks.COPPER_BLOCK, "General.registerCopper");
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS, CompressedBlock.COMPRESSED_COPPER_BLOCK, Blocks.COPPER_BLOCK, "General.registerCopper");
     }
 
     private void addCompressedRecipe(Consumer<FinishedRecipe> consumer, RegistryObject<Block>[] blocks, String blockPrefix, Block baseBlock, String configKey) {

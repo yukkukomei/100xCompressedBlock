@@ -32,6 +32,7 @@ public class CompressedBlockJEIPlugin implements IModPlugin {
 
         hideItems(ingredientManager, CompressedBlockConfig.REGISTER_DIAMOND.get(), CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS);
         hideItems(ingredientManager, CompressedBlockConfig.REGISTER_IRON.get(), CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_COPPER.get(), CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS);
     }
 
     private void hideItems(IIngredientManager ingredientManager, boolean isDisplay, RegistryObject<Item>[] items) {

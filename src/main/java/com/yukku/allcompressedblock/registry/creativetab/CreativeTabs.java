@@ -25,6 +25,7 @@ public class CreativeTabs {
     private static void displayCompressedItems(Object param, CreativeModeTab.Output output) {
         displayItemsFromRegistry(CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS, output);
         displayItemsFromRegistry(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS, output);
     }
 
     private static void displayItemsFromRegistry(RegistryObject<Item>[] items, CreativeModeTab.Output output) {

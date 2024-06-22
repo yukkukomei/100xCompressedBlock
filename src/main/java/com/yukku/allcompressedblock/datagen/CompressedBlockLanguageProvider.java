@@ -16,6 +16,7 @@ public class CompressedBlockLanguageProvider extends LanguageProvider {
         add("itemgroup.compressed_block", "100x Compressed Block");
         addBlockTranslations(CompressedBlock.COMPRESSED_DIAMOND_BLOCK, "Compressed Diamond Block", "x Compressed Diamond Block");
         addBlockTranslations(CompressedBlock.COMPRESSED_IRON_BLOCK, "Compressed Iron Block", "x Compressed Iron Block");
+        addBlockTranslations(CompressedBlock.COMPRESSED_COPPER_BLOCK, "Compressed Copper Block", "x Compressed Copper Block");
     }
 
     private void addBlockTranslations(String blockName, String singleCompressedName, String multiCompressedName) {

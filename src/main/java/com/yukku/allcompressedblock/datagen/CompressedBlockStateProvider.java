@@ -17,6 +17,7 @@ public class CompressedBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         registerCompressedBlockStates(CompressedBlock.COMPRESSED_IRON_BLOCKS);
         registerCompressedBlockStates(CompressedBlock.COMPRESSED_DIAMOND_BLOCKS);
+        registerCompressedBlockStates(CompressedBlock.COMPRESSED_COPPER_BLOCKS);
     }
 
     private void registerCompressedBlockStates(RegistryObject<Block>[] blocks) {
