@@ -26,6 +26,12 @@ public class CreativeTabs {
         displayItemsFromRegistry(CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS, output);
         displayItemsFromRegistry(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS, output);
         displayItemsFromRegistry(CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_GOLD_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_EMERALD_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_LAPISLAZULI_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_REDSTONE_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_COAL_BLOCK_ITEMS, output);
+        displayItemsFromRegistry(CompressedItem.COMPRESSED_NETHERITE_BLOCK_ITEMS, output);
     }
 
     private static void displayItemsFromRegistry(RegistryObject<Item>[] items, CreativeModeTab.Output output) {

@@ -35,6 +35,30 @@ public class CompressedBlockRecipeProvider extends RecipeProvider {
         // 銅圧縮解体レシピ
         addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_COPPER_BLOCKS, CompressedBlock.COMPRESSED_COPPER_BLOCK, Blocks.COPPER_BLOCK, "General.registerCopper");
         addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS, CompressedBlock.COMPRESSED_COPPER_BLOCK, Blocks.COPPER_BLOCK, "General.registerCopper");
+
+        // 金圧縮解体レシピ
+        addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_GOLD_BLOCKS, CompressedBlock.COMPRESSED_GOLD_BLOCK, Blocks.GOLD_BLOCK, "General.registerGold");
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_GOLD_BLOCK_ITEMS, CompressedBlock.COMPRESSED_GOLD_BLOCK, Blocks.GOLD_BLOCK, "General.registerGold");
+
+        // エメラルド圧縮解体レシピ
+        addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_EMERALD_BLOCKS, CompressedBlock.COMPRESSED_EMERALD_BLOCK, Blocks.EMERALD_BLOCK, "General.registerEmerald");
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_EMERALD_BLOCK_ITEMS, CompressedBlock.COMPRESSED_EMERALD_BLOCK, Blocks.EMERALD_BLOCK, "General.registerEmerald");
+
+        // ラピスラズリ圧縮解体レシピ
+        addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_LAPIS_BLOCKS, CompressedBlock.COMPRESSED_LAPIS_BLOCK, Blocks.LAPIS_BLOCK, "General.registerLapis");
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_LAPISLAZULI_BLOCK_ITEMS, CompressedBlock.COMPRESSED_LAPIS_BLOCK, Blocks.LAPIS_BLOCK, "General.registerLapis");
+
+        // レッドストーン圧縮解体レシピ
+        addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_REDSTONE_BLOCKS, CompressedBlock.COMPRESSED_REDSTONE_BLOCK, Blocks.REDSTONE_BLOCK, "General.registerRedstone");
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_REDSTONE_BLOCK_ITEMS, CompressedBlock.COMPRESSED_REDSTONE_BLOCK, Blocks.REDSTONE_BLOCK, "General.registerRedstone");
+
+        // 石炭圧縮解体レシピ
+        addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_COAL_BLOCKS, CompressedBlock.COMPRESSED_COAL_BLOCK, Blocks.COAL_BLOCK, "General.registerCoal");
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_COAL_BLOCK_ITEMS, CompressedBlock.COMPRESSED_COAL_BLOCK, Blocks.COAL_BLOCK, "General.registerCoal");
+
+        // ネザライト圧縮解体レシピ
+        addCompressedRecipe(consumer, CompressedBlock.COMPRESSED_NETHERITE_BLOCKS, CompressedBlock.COMPRESSED_NETHERITE_BLOCK, Blocks.NETHERITE_BLOCK, "General.registerNetherite");
+        addDisassemblyRecipe(consumer, CompressedItem.COMPRESSED_NETHERITE_BLOCK_ITEMS, CompressedBlock.COMPRESSED_NETHERITE_BLOCK, Blocks.NETHERITE_BLOCK, "General.registerNetherite");
     }
 
     private void addCompressedRecipe(Consumer<FinishedRecipe> consumer, RegistryObject<Block>[] blocks, String blockPrefix, Block baseBlock, String configKey) {

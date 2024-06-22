@@ -33,6 +33,12 @@ public class CompressedBlockLootTableProvider extends LootTableProvider {
             registerLootTables(writer, CompressedBlock.COMPRESSED_DIAMOND_BLOCKS, CompressedBlock.COMPRESSED_DIAMOND_BLOCK, CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM);
             registerLootTables(writer, CompressedBlock.COMPRESSED_IRON_BLOCKS, CompressedBlock.COMPRESSED_IRON_BLOCK, CompressedItem.COMPRESSED_IRON_BLOCK_ITEM);
             registerLootTables(writer, CompressedBlock.COMPRESSED_COPPER_BLOCKS, CompressedBlock.COMPRESSED_COPPER_BLOCK, CompressedItem.COMPRESSED_COPPER_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_GOLD_BLOCKS, CompressedBlock.COMPRESSED_GOLD_BLOCK, CompressedItem.COMPRESSED_GOLD_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_EMERALD_BLOCKS, CompressedBlock.COMPRESSED_EMERALD_BLOCK, CompressedItem.COMPRESSED_EMERALD_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_LAPIS_BLOCKS, CompressedBlock.COMPRESSED_LAPIS_BLOCK, CompressedItem.COMPRESSED_LAPIS_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_REDSTONE_BLOCKS, CompressedBlock.COMPRESSED_REDSTONE_BLOCK, CompressedItem.COMPRESSED_REDSTONE_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_COAL_BLOCKS, CompressedBlock.COMPRESSED_COAL_BLOCK, CompressedItem.COMPRESSED_COAL_BLOCK_ITEM);
+            registerLootTables(writer, CompressedBlock.COMPRESSED_NETHERITE_BLOCKS, CompressedBlock.COMPRESSED_NETHERITE_BLOCK, CompressedItem.COMPRESSED_NETHERITE_BLOCK_ITEM);
         }
 
         private void registerLootTables(@NotNull BiConsumer<ResourceLocation, LootTable.Builder> writer, RegistryObject<Block>[] blocks, String blockNamePrefix, String itemNamePrefix) {
