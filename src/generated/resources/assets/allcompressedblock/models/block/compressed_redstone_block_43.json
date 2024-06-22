@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "allcompressedblock:block/compressed_redstone_block_43"
+  }
+}
