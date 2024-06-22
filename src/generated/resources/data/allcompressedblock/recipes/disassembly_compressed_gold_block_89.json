@@ -1,0 +1,27 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "allcompressedblock:config_condition",
+          "configKey": "General.registerGold",
+          "expectedValue": true
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "allcompressedblock:compressed_gold_block_item_89"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "allcompressedblock:compressed_gold_block_item_88"
+        }
+      }
+    }
+  ]
+}

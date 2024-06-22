@@ -33,6 +33,12 @@ public class CompressedBlockJEIPlugin implements IModPlugin {
         hideItems(ingredientManager, CompressedBlockConfig.REGISTER_DIAMOND.get(), CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS);
         hideItems(ingredientManager, CompressedBlockConfig.REGISTER_IRON.get(), CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS);
         hideItems(ingredientManager, CompressedBlockConfig.REGISTER_COPPER.get(), CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_GOLD.get(), CompressedItem.COMPRESSED_GOLD_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_EMERALD.get(), CompressedItem.COMPRESSED_EMERALD_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_LAPIS.get(), CompressedItem.COMPRESSED_LAPISLAZULI_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_REDSTONE.get(), CompressedItem.COMPRESSED_REDSTONE_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_COAL.get(), CompressedItem.COMPRESSED_COAL_BLOCK_ITEMS);
+        hideItems(ingredientManager, CompressedBlockConfig.REGISTER_NETHERITE.get(), CompressedItem.COMPRESSED_NETHERITE_BLOCK_ITEMS);
     }
 
     private void hideItems(IIngredientManager ingredientManager, boolean isDisplay, RegistryObject<Item>[] items) {

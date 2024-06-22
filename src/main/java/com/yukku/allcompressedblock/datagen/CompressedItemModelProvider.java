@@ -17,6 +17,12 @@ public class CompressedItemModelProvider extends ItemModelProvider {
         registerItemModels(CompressedItem.COMPRESSED_IRON_BLOCK_ITEM, CompressedBlock.COMPRESSED_IRON_BLOCK);
         registerItemModels(CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEM, CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
         registerItemModels(CompressedItem.COMPRESSED_COPPER_BLOCK_ITEM, CompressedBlock.COMPRESSED_COPPER_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_GOLD_BLOCK_ITEM, CompressedBlock.COMPRESSED_GOLD_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_EMERALD_BLOCK_ITEM, CompressedBlock.COMPRESSED_EMERALD_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_LAPIS_BLOCK_ITEM, CompressedBlock.COMPRESSED_LAPIS_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_REDSTONE_BLOCK_ITEM, CompressedBlock.COMPRESSED_REDSTONE_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_COAL_BLOCK_ITEM, CompressedBlock.COMPRESSED_COAL_BLOCK);
+        registerItemModels(CompressedItem.COMPRESSED_NETHERITE_BLOCK_ITEM, CompressedBlock.COMPRESSED_NETHERITE_BLOCK);
     }
 
     private void registerItemModels(String itemPrefix, String blockPrefix) {

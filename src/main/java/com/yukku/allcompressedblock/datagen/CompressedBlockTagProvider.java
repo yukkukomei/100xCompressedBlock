@@ -25,9 +25,21 @@ public class CompressedBlockTagProvider extends BlockTagsProvider {
         addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_COPPER_BLOCK);
         addCompressedBlockTags(BlockTags.NEEDS_IRON_TOOL, CompressedBlock.COMPRESSED_COPPER_BLOCK);
         addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_IRON_BLOCK);
-        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_IRON_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_IRON_TOOL, CompressedBlock.COMPRESSED_IRON_BLOCK);
         addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
         addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_DIAMOND_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_GOLD_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_GOLD_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_EMERALD_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_EMERALD_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_LAPIS_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_LAPIS_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_REDSTONE_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_REDSTONE_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_COAL_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_IRON_TOOL, CompressedBlock.COMPRESSED_COAL_BLOCK);
+        addCompressedBlockTags(BlockTags.MINEABLE_WITH_PICKAXE, CompressedBlock.COMPRESSED_NETHERITE_BLOCK);
+        addCompressedBlockTags(BlockTags.NEEDS_DIAMOND_TOOL, CompressedBlock.COMPRESSED_NETHERITE_BLOCK);
     }
 
     private void addCompressedBlockTags(TagKey<Block> tagKey, String blockName) {

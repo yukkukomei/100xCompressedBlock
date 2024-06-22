@@ -18,6 +18,12 @@ public class CreativeTabEventHandler {
             removeItems(event, CompressedBlockConfig.REGISTER_DIAMOND.get(), CompressedItem.COMPRESSED_DIAMOND_BLOCK_ITEMS);
             removeItems(event, CompressedBlockConfig.REGISTER_IRON.get(), CompressedItem.COMPRESSED_IRON_BLOCK_ITEMS);
             removeItems(event, CompressedBlockConfig.REGISTER_COPPER.get(), CompressedItem.COMPRESSED_COPPER_BLOCK_ITEMS);
+            removeItems(event, CompressedBlockConfig.REGISTER_GOLD.get(), CompressedItem.COMPRESSED_GOLD_BLOCK_ITEMS);
+            removeItems(event, CompressedBlockConfig.REGISTER_EMERALD.get(), CompressedItem.COMPRESSED_EMERALD_BLOCK_ITEMS);
+            removeItems(event, CompressedBlockConfig.REGISTER_LAPIS.get(), CompressedItem.COMPRESSED_LAPISLAZULI_BLOCK_ITEMS);
+            removeItems(event, CompressedBlockConfig.REGISTER_REDSTONE.get(), CompressedItem.COMPRESSED_REDSTONE_BLOCK_ITEMS);
+            removeItems(event, CompressedBlockConfig.REGISTER_COAL.get(), CompressedItem.COMPRESSED_COAL_BLOCK_ITEMS);
+            removeItems(event, CompressedBlockConfig.REGISTER_NETHERITE.get(), CompressedItem.COMPRESSED_NETHERITE_BLOCK_ITEMS);
         }
     }
 

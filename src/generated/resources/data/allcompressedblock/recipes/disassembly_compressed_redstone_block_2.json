@@ -1,0 +1,27 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "allcompressedblock:config_condition",
+          "configKey": "General.registerRedstone",
+          "expectedValue": true
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "allcompressedblock:compressed_redstone_block_item_2"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "allcompressedblock:compressed_redstone_block_item_1"
+        }
+      }
+    }
+  ]
+}
